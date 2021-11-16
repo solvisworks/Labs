@@ -71,15 +71,21 @@ print(list_75_el)
 #Cw8 
 list_los_1 = []
 list_los_2 = []
-for i in range(len(list2)):
-    #switch
-    a = random.randint(0, 1)
-    if (a == 0):
-        list_los_1.append(list2[i])
-    else:
-        list_los_2.append(list2[i])
-random.shuffle(list_los_1)
-random.shuffle(list_los_2)
+def los_list_del(l1, l2, l3):
+    for i in range(len(l1)):
+        a = random.randrange(0,len(l1))
+        b = random.randint(0,1)
+        if (len(l1) > 0):
+            if (b == 0):
+                l2.append(l1[a])
+                del l1[a]
+            else:
+                l3.append(l1[a])
+                del l1[a]
+        else:
+            print('lista pusta')
+
+los_list_del(list2,list_los_1,list_los_2)
 print()
 print('Cw8: ----')
 print('Lista los 1 - ilosc: ', len(list_los_1))
@@ -87,22 +93,22 @@ print(list_los_1)
 print('Lista los 2 - ilosc: ', len(list_los_2))
 print(list_los_2)
 
+
+for i in range (100,201,1):
+    list2.append(i)
+
+
 #Cw9 brak funkcji los
+
 print()
 print('Cw9: ----')
 print('Srednia tablic')
 for i in range(10):
     list_los_1 = []
     list_los_2 = []
-    for j in range(len(list2)):
-        #switch
-        a = random.randint(0, 1)
-        if (a == 0):
-            list_los_1.append(list2[j])
-        else:
-            list_los_2.append(list2[j])
-    random.shuffle(list_los_1)
-    random.shuffle(list_los_2)
+    los_list_del(list2,list_los_1,list_los_2)
+    for i in range (100,201,1):
+        list2.append(i)
     sr1 = np.sum(list_los_1) / len(list_los_1)
     sr2 = np.sum(list_los_2) / len(list_los_2)
     print('1 : ', format(sr1, ".2f"), '2 : ', format(sr2, ".2f"))
@@ -120,7 +126,7 @@ tab_0_1f = np.empty(1000)
 for i in range(len(tab_0_1f)):
     tab_0_1f[i] = random.uniform(0,1)
 print()
-print('Cw11: ----')
+print('Cw12: ----')
 print(tab_0_1f)
 
 #Cw14
@@ -156,7 +162,7 @@ print(tab_wartosc_0)
 #     def signum(self):
         
         
-# p1 = Person()
+# p1 = Klasa()
 # p1.fun()
 #Cw16
 x = np.linspace(-5,5,100)
