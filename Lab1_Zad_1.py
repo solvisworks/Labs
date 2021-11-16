@@ -8,12 +8,12 @@ import random
 import numpy as np
 import matplotlib.pyplot as plt
 import math
-#Cw1
+#Cw1----------------
 list = []
 list2 = []
 list3 = []
 
-#Cw2
+#Cw2----------------
 for i in range (100,201,1):
     list.append(i)
     list2.append(i)
@@ -22,7 +22,7 @@ print()
 print('Cw2: ----')
 print(list)
 
-#Cw3
+#Cw3----------------
 for i in range(len(list)):
     list[i] = list[i]+8
     list3[i] = list[i]
@@ -30,13 +30,13 @@ print()
 print('Cw3: ----')
 print(list)
 
-#Cw4
+#Cw4--------------
 random.shuffle(list)
 print()
 print('Cw4: ----')
 print(list)
 
-#Cw5
+#Cw5---------------
 n = random.randint(1, 100)
 m = 100 - n
 print()
@@ -47,13 +47,13 @@ print('Cw5: ----')
 print(tab)
 print()
 
-#Cw6
+#Cw6--------------
 tabbool = np.array(tab, dtype = bool)
 print()
 print('Cw6: ----')
 print(tabbool)
 
-#Cw7
+#Cw7--------------
 list_25_el = []
 list_75_el = []
 for i in range(len(list2)):
@@ -68,7 +68,7 @@ print(list_25_el)
 print('Lista 75 elementow:')
 print(list_75_el)
 
-#Cw8 
+#Cw8 --------------
 list_los_1 = []
 list_los_2 = []
 def los_list_del(l1, l2, l3):
@@ -97,9 +97,7 @@ print(list_los_2)
 for i in range (100,201,1):
     list2.append(i)
 
-
-#Cw9 
-
+#Cw9 --------------
 print()
 print('Cw9: ----')
 print('Srednia tablic')
@@ -113,7 +111,7 @@ for i in range(10):
     sr2 = np.sum(list_los_2) / len(list_los_2)
     print('1 : ', format(sr1, ".2f"), '2 : ', format(sr2, ".2f"))
     
-#Cw10
+#Cw10--------------
 def pary(li,t):
     for i,j in zip(li,t):
         print('{0}'.format(i), ' {0}'.format(j))
@@ -121,7 +119,7 @@ print()
 print('Cw10: ---- Pary Cw 3 i 6')
 pary(list3, tabbool)
 
-#Cw12
+#Cw12--------------
 tab_0_1f = np.empty(1000)
 for i in range(len(tab_0_1f)):
     tab_0_1f[i] = random.uniform(0,1)
@@ -129,7 +127,7 @@ print()
 print('Cw12: ----')
 print(tab_0_1f)
 
-#Cw14
+#Cw14--------------
 def licz_Eltab(l,a):
     if (len(l) > a):
         print(len(l))
@@ -137,7 +135,7 @@ print()
 print('Cw14: ---- Liczba elementow tablicy')
 licz_Eltab(tab_0_1f, 100)
 
-#Cw15
+#Cw15--------------
 def zmien_Wartosc_0(l,a):
     for i in range(len(l)):
         if (l[i] < a):
@@ -150,7 +148,7 @@ print()
 print('Cw15: ---- Zamiana na 0 liczb ponizej',a)
 print(tab_wartosc_0)
 
-#Cw16
+#Cw16--------------
 # class klasa:
 #     def __init__(self, wagi, bias):
 #         self.wagi = wagi
@@ -164,7 +162,8 @@ print(tab_wartosc_0)
         
 # p1 = Klasa()
 # p1.fun()
-#Cw16
+
+#Cw17--------------
 x = np.linspace(-5,5,100)
 y = x**3
 # setting the axes at the centre
@@ -181,7 +180,8 @@ plt.title('Zad.16 Funkcja f(x) = x^3')
 plt.plot(x,y)
 plt.savefig('f1.png')
 plt.show()
-#Cw17
+
+#Cw18--------------
 x = np.linspace(0,20,100)
 y1 = np.log10(x)
 y2 = np.log2(x)
@@ -192,11 +192,13 @@ plt.title('Zad.17 Funkcja f(x) = log_10(x) & g(x) = log_2(x)')
 plt.plot(x,y1,x,y2)
 plt.legend(["log10(X)", "log2(x)"], loc ="lower right")
 plt.show()
-#Cw18
+
+#Cw19--------------
 x = np.linspace(-3,3,100)
 ynorm = (math.e**((-x**2)/2))/(math.sqrt(2*math.pi))
 fnorm = plt.figure()
 plt.title('Zad.18')
 plt.plot(x,ynorm)
 plt.show()
-#Cw19
+
+#Cw20--------------
