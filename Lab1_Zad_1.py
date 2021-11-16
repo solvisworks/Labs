@@ -98,7 +98,7 @@ for i in range (100,201,1):
     list2.append(i)
 
 
-#Cw9 brak funkcji los
+#Cw9 
 
 print()
 print('Cw9: ----')
