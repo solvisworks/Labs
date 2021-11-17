@@ -129,11 +129,14 @@ print(tab_0_1f)
 
 #Cw14--------------
 def licz_Eltab(l,a):
-    if (len(l) > a):
-        print(len(l))
+    wynik = 0
+    for i in l:
+        if (i > a):
+            wynik += 1
+    return wynik
 print()
 print('Cw14: ---- Liczba elementow tablicy')
-licz_Eltab(tab_0_1f, 100)
+print(licz_Eltab(tab_0_1f,0.3))
 
 #Cw15--------------
 def zmien_Wartosc_0(l,a):
@@ -166,7 +169,7 @@ print(tab_wartosc_0)
 #Cw17--------------
 x = np.linspace(-5,5,100)
 y = x**3
-# setting the axes at the centre
+
 f = plt.figure()
 ax = f.add_subplot(1, 1, 1)
 ax.spines['left'].set_position('center')
@@ -185,10 +188,8 @@ plt.show()
 x = np.linspace(0,20,100)
 y1 = np.log10(x)
 y2 = np.log2(x)
-# setting the axes at the centre
-f2 = plt.figure()
 
-plt.title('Zad.17 Funkcja f(x) = log_10(x) & g(x) = log_2(x)')
+plt.title('Zad.18 Funkcja f(x) = log_10(x) & g(x) = log_2(x)')
 plt.plot(x,y1,x,y2)
 plt.legend(["log10(X)", "log2(x)"], loc ="lower right")
 plt.show()
@@ -197,7 +198,7 @@ plt.show()
 x = np.linspace(-3,3,100)
 ynorm = (math.e**((-x**2)/2))/(math.sqrt(2*math.pi))
 fnorm = plt.figure()
-plt.title('Zad.18')
+plt.title('Zad.19')
 plt.plot(x,ynorm)
 plt.show()
 
